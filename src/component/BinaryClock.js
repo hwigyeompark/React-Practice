@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import Digit from "./Digit";
 
 class BinaryClock extends Component{
     state = {
@@ -13,33 +14,27 @@ class BinaryClock extends Component{
     }
     binary = () => {
         const now = new Date();
+        const hh = now.getHours().toString().padStart(2, '0');
+        const mm = now.getMinutes().toString().padStart(2, '0');
+        const ss = now.getSeconds().toString().padStart(2, '0');
         this.setState({
-            h : this.binaryShape(now.getHours().toString().padStart(2, '0').substr(0, 1)),
-            h1 : this.binaryShape(now.getHours().toString().padStart(2, '0').substr(-1)),
-            m : this.binaryShape(now.getMinutes().toString().padStart(2, '0').substr(0, 1)),
-            m1 : this.binaryShape(now.getMinutes().toString().padStart(2, '0').substr(-1)),
-            s : this.binaryShape(now.getSeconds().toString().padStart(2, '0').substr(0, 1)),
-            s1 : this.binaryShape(now.getSeconds().toString().padStart(2, '0').substr(-1))
+            h : hh.substr(0, 1),
+            h1 : hh.substr(-1),
+            m : mm.substr(0, 1),
+            m1 : mm.substr(-1),
+            s : ss.substr(0, 1),
+            s1 : ss.substr(-1)
         });
-    };
-
-    binaryShape = (num) => {
-        const binary = parseInt(num, 10).toString(2).padStart(4, '0');
-        let result = '';
-        for (let i = 0; i< binary.length; i++){
-            result += binary.substr(i, 1) === '0' ? '○':'●';
-        }
-        return result;
     };
     render(){
         return(
             <div>
-                <div>{this.state.h}</div>
-                <div>{this.state.h1}</div>
-                <div>{this.state.m}</div>
-                <div>{this.state.m1}</div>
-                <div>{this.state.s}</div>
-                <div>{this.state.s1}</div>
+                <Digit value={this.state.h} />
+                <Digit value={this.state.h1} />
+                <Digit value={this.state.m} />
+                <Digit value={this.state.m1} />
+                <Digit value={this.state.s} />
+                <Digit value={this.state.s1} />
             </div>
         );
     }

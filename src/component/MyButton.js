@@ -5,7 +5,7 @@ class MyButton extends Component{
         btn_msg:''
     };
     handClick = (e) =>{
-        this.setState({btn_msg: new Date().toString()});
+        this.props.buttonClick(e);
     };
     render(){
         return(

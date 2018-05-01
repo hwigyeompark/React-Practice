@@ -7,10 +7,10 @@ class Digit extends Component{
     render(){
         return(
             <div>
-                <DigitOne value={this.binaryShape(this.props.value).substr(0, 1)}/>
-                <DigitOne value={this.binaryShape(this.props.value).substr(1, 1)}/>
-                <DigitOne value={this.binaryShape(this.props.value).substr(2, 1)}/>
-                <DigitOne value={this.binaryShape(this.props.value).substr(3, 1)}/>
+                <DigitOne display_val = {this.binaryShape(this.props.value).substr(0, 1)}/>
+                <DigitOne display_val = {this.binaryShape(this.props.value).substr(1, 1)}/>
+                <DigitOne display_val = {this.binaryShape(this.props.value).substr(2, 1)}/>
+                <DigitOne display_val = {this.binaryShape(this.props.value).substr(3, 1)}/>
             </div>
         );
     }

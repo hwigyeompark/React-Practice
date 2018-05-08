@@ -8,12 +8,13 @@ import ContactForm from "./component/ContactForm";
 /*import {TodoItem} from './component/TodoList.js';
 import ContactList from "./component/ContactList";*/
 import RestClient from "./component/RestClient";
+import AddressList from "./component/AddressList";
 
 class App extends Component {
   render() {
     return (
         <div>
-        <RestClient />
+        <AddressList/>
         </div>
     );
   }

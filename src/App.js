@@ -7,12 +7,13 @@ import ContactForm from "./component/ContactForm";
 /*import BinaryClock from "./component/BinaryClock";*/
 /*import {TodoItem} from './component/TodoList.js';
 import ContactList from "./component/ContactList";*/
+import RestClient from "./component/RestClient";
 
 class App extends Component {
   render() {
     return (
         <div>
-        <ContactForm/>
+        <RestClient />
         </div>
     );
   }

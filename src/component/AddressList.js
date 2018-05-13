@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import request from 'superagent';
+import List from "./List";
 
 class AddressList extends Component {
     componentDidMount(){
@@ -18,6 +19,7 @@ class AddressList extends Component {
         return(
           <div>
             <button onClick={this.addBtnClick}>사용자 추가</button>
+              <List/>
           </div>
         );
     }

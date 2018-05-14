@@ -1,14 +1,19 @@
 import React, {Component} from 'react';
 import request from 'superagent';
+import AddressList from "./AddressList";
+import Person from "./Person";
 
 class List extends Component {
+    constructor() {
+        super();
+        this.state = {
+        }
+    }
     render(){
         return(
             <div>
-                <ul>
-                    <li>{this.props.username}</li>
-                    <li>{this.props.email}</li>
-                    <li>{this.props.phone}</li>
+                <ul className="list">
+                    return <Person person = {person}/>
                 </ul>
             </div>
         );
